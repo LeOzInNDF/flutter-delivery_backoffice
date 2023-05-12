@@ -16,31 +16,29 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with Loader, Messages {
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(
-      body: Container(
-        child: Container(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Form(
-                  autovalidateMode: AutovalidateMode.onUserInteraction,
-                  child: TextFormField(
-                    decoration: const InputDecoration(label: Text('Login')),
-                    validator: (String) => 'Erro',
-                  ),
+    return Container(
+      child: Container(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Form(
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                child: TextFormField(
+                  decoration: const InputDecoration(label: Text('Login')),
+                  validator: (String) => 'Erro',
                 ),
               ),
-              SizedBox(
-                width: 200,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('Botão'),
-                ),
+            ),
+            SizedBox(
+              width: 200,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text('Botão'),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
